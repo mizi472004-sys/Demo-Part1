@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
 {
-// Start is called before the first frame update
-void Start()
-{
-Debug.Log("Hello World!");
-}
+    void Start()
+    {
+        Debug.Log("Hello World! (Start called)");
+    }
 
-// Update is called once per frame
-void Update()
-{
-Debug.Log("Update called! " + Time.frameCount);
-}
+    void Update()
+    {
+        // Log mỗi 1 giây (≈ 60 frame)
+        if (Time.frameCount % 60 == 0)
+        {
+            Debug.Log("Update running - frame: " + Time.frameCount);
+        }
+    }
 }
