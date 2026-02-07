@@ -1,22 +1,10 @@
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : Health
 {
-    public GameObject explosionPrefab;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void Die()
     {
-        if (collision.CompareTag("Bullet"))
-        {
-            Destroy(collision.gameObject);
-
-            Instantiate(
-                explosionPrefab,
-                transform.position,
-                Quaternion.identity
-            );
-
-            Destroy(gameObject);
-        }
+        base.Die();
+        Debug.Log("Enemy died");
     }
 }

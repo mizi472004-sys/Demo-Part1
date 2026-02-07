@@ -11,15 +11,15 @@ GameObject:
   - component: {fileID: 2381409758111521695}
   - component: {fileID: 3909097781386471226}
   - component: {fileID: 5313193998768952641}
-  - component: {fileID: 6779995744374667770}
   - component: {fileID: 649959131717215326}
   - component: {fileID: 1866028674544950942}
   - component: {fileID: 9198088956871951058}
   - component: {fileID: 270772890442010892}
   - component: {fileID: 8348010147883865410}
   - component: {fileID: 8601347499132764017}
-  m_Layer: 0
-  m_Name: Enemy_straight_projectile (1)
+  - component: {fileID: 7457141771212946396}
+  m_Layer: 7
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,41 +112,6 @@ MonoBehaviour:
   shotChance: 10
   shotTimeMin: 1
   shotTimeMax: 3
---- !u!58 &6779995744374667770
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5608792148206428831}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.755
 --- !u!114 &649959131717215326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,3 +244,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 4544176654483440, guid: af3f7f7fa0a63a04fadab2bf00704a0a,
     type: 3}
+  defaultHealthPoint: 3
+--- !u!114 &7457141771212946396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5608792148206428831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f536b294325d8264ab578b5809e1717a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 8601347499132764017}
+  damage: 1
