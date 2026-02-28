@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
+    public GameObject gameOverCanvas;
+
     protected override void Die()
     {
         base.Die();
+
         Debug.Log("Player died");
-        // sau này có thể load Game Over scene
+
+        gameOverCanvas.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

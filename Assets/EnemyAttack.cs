@@ -2,12 +2,18 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public EnemyHealth health;   // ⭐ phải là EnemyHealth
+    private EnemyHealth health;   // ❌ bỏ public
     public int damage = 1;
+
+    private void Awake()
+    {
+        health = GetComponent<EnemyHealth>();   // ✅ tự lấy component
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var player = collision.GetComponent<PlayerHealth>();
+        PlayerHealth player = collision.GetComponent<PlayerHealth>();
+
         if (player != null)
         {
             player.TakeDamage(damage);

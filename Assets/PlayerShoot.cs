@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public GameObject bulletPrefab; // Prefab đạn
-    public Transform firePoint;      // Nòng súng
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    public AudioClip shootSound;
+
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -16,5 +24,6 @@ public class PlayerShoot : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        audioSource.PlayOneShot(shootSound);
     }
 }
