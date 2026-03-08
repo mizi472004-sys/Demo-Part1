@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 9198088956871951058}
   - component: {fileID: 270772890442010892}
   - component: {fileID: 8348010147883865410}
-  - component: {fileID: 8601347499132764017}
   - component: {fileID: 7457141771212946396}
+  - component: {fileID: 1941518897080496929}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -230,21 +230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
---- !u!114 &8601347499132764017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5608792148206428831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86ff73ef95612c34e974aafba1ce3441, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 4544176654483440, guid: af3f7f7fa0a63a04fadab2bf00704a0a,
-    type: 3}
-  defaultHealthPoint: 3
 --- !u!114 &7457141771212946396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,3 +243,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+--- !u!114 &1941518897080496929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5608792148206428831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ff73ef95612c34e974aafba1ce3441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 0}
+  defaultHealthPoint: 3
